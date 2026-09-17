@@ -1,1 +1,1 @@
-{"name":"home-sleep-screening","version":"0.1.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","test":"npm run check"},"devDependencies":{"typescript":"5.9.2"}}
+{"name":"home-sleep-screening","version":"0.1.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","build":"tsc -p tsconfig.build.json","test":"npm run check && npm run build && node --test \"dist/test/*.test.js\"","start":"npm run build && node dist/src/cli.js","generate:fixture":"node scripts/generate-fixture.mjs"},"devDependencies":{"@types/node":"^22.20.3","typescript":"5.9.2"}}
